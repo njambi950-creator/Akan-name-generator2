@@ -14,4 +14,10 @@ body{
     align-items: center;
     min-height: 100vh;
 }
+.container{
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    
+}
 
