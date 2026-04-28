@@ -17,7 +17,7 @@ JavaScript
 2. Navigate to the folder.
 3. Open the index.html file in any modern web browser
 ## Live link:https:
-//njambi950-creator.github.io/Akan-name-generator2/
+https://njambi950-creator.github.io/Akan-name-generator2/
 ## Contact Information
 Github profile:https://github.com/njambi950-creator
 ## License 
