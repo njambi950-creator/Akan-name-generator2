@@ -11,3 +11,10 @@ document
     const gender = document.querySelector(
       'input[name="gender"]:checked',
     )?.value;
+    
+    // 2. Validation
+    if (!year || !month || !day || !gender) {
+      alert("Please fill in all fields!");
+      return;
+    }
+
