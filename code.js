@@ -19,3 +19,8 @@ document
     }
 // 3. Create a Date object
     const birthDate = new Date(year, month - 1, day);
+    
+    // 4. Get the day of the week (0 = Sunday, 6 = Saturday)
+    const dayOfWeek = birthDate.getDay();
+
+
