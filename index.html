@@ -7,45 +7,58 @@
     <title>Akan Name Generator</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Akan Name Generator</h1>
-        <p>
-          Akan names come from Ghanaian culture, where children are named based
-          on the day they were born. This is a simple web application that
-          calculates the day of the week a user was born and assigns them an
-          Akan name based on their gender.Enter your birthday to find yours!
-        </p>
-      </header>
-      <!-- creating form -->
-      <form id="akan-form">
-        <div class="form-group">
-          <label for="birthdate">Select your Date of Birth</label>
-          <input type="date" id="birthdate" required />
-        </div>
+    <main class="content-wrapper">
+      <section class="intro-section">
+        <header>
+          <h1>Akan Name Generator</h1>
+          <p>
+            Akan names come from Ghanaian culture, where children are named
+            based on the day they were born.<br />
+            This is a simple web application that calculates the day of the week
+            a user was born and assigns them an Akan name based on their
+            gender.<br />
+            Enter your birthday to find yours!
+          </p>
+        </header>
+      </section>
 
-        <!-- gender -->
-        <div class="form-group">
-          <label>Gender</label>
-          <div class="radio-group">
-            <input type="radio" name="gender" value="male" id="male" required />
-            <label for="male">Male</label>
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              id="female"
-              required
-            />
-            <label for="female">Female</label>
+      <!-- Form Section -->
+      <section class="form-selection">
+        <form id="akan-form">
+          <div class="form-group">
+            <label for="birthdate">Select your Date of Birth</label>
+            <input type="date" id="birthdate" required />
           </div>
+          <!-- Gender -->
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                required
+              />
+              <label for="male">Male</label>
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                id="female"
+                required
+              />
+              <label for="female">Female</label>
+            </div>
+          </div>
+          <button type="submit" id="submit-button">Find my Name</button>
+        </form>
+
+        <div id="result-display" class="hidden">
+          <h2 id="output-name"></h2>
         </div>
-        <button type="submit" id="submit-button">Find my Name</button>
-      </form>
-      <div id="result display" class="hidden">
-        <h2 id="output-name"></h2>
-      </div>
-    </div>
+      </section>
+    </main>
     <script src="code.js"></script>
   </body>
 </html>

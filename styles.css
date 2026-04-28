@@ -1,23 +1,16 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-    background-image:url(background.jpg);
-    background-size: contain;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-color: #d2b48c;
+  background-image: url(background.jpg);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: #d2b48c;
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 100vh;
-}
-.container{
-    background: rgba(255, 255, 255, 0.7);
-    padding: 40px;
-    border-radius: 15px;
-    
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
 }
 
