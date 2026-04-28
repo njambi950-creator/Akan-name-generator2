@@ -4,7 +4,7 @@ document
     // Prevent the form from refreshing the page
     event.preventDefault();
 
-// 1. Retrieve users input (Fixed typos in getElementById)
+    // 1. Retrieve users input (Fixed typos in getElementById)
     const year = document.getElementById("year").value;
     const month = document.getElementById("month").value;
     const day = document.getElementById("day").value;
@@ -17,7 +17,7 @@ document
       alert("Please fill in all fields!");
       return;
     }
-// 3. Create a Date object
+    // 3. Create a Date object
     const birthDate = new Date(year, month - 1, day);
 
     // 4. Get the day of the week (0 = Sunday, 6 = Saturday)
@@ -41,7 +41,7 @@ document
       "Afua",
       "Ama",
     ];
-      const days = [
+    const days = [
       "Sunday",
       "Monday",
       "Tuesday",
@@ -50,9 +50,17 @@ document
       "Friday",
       "Saturday",
     ];
-     // 6. Pick the name based on gender
+    // 6. Pick the name based on gender
     let akanName =
       gender === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
+    // 7. Show the result
+    const resultDisplay = document.getElementById("result-display");
+    const outputName = document.getElementById("output-name");
+
+    outputName.innerHTML = `You were born on a ${days[dayOfWeek]}. <br> Your Akan name is <strong>${akanName}</strong>!`;
+    resultDisplay.classList.remove("hidden");
+  });
+
 
 
 
