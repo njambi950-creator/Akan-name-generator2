@@ -6,10 +6,11 @@ In Ghanaian culture, children are traditionally named after the day of the week 
 The application takes a user's date of birth, calculates the specific day of the week,
 and provides their corresponding name in Ashanti Twi.
 ## Project Setup Instructions
-1. Clone repository
+1. Clone the repository
 2. Navigate to the folder.
 3. Open the index.html file in any modern web browser
-## Live link:
+## Live link:https:
+//njambi950-creator.github.io/Akan-name-generator2/
 ## License 
 Copyright(C) 2026 Maryann Njambi
 
