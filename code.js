@@ -50,6 +50,10 @@ document
       "Friday",
       "Saturday",
     ];
+     // 6. Pick the name based on gender
+    let akanName =
+      gender === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
+
 
 
 
