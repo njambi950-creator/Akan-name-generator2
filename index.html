@@ -9,54 +9,114 @@
   <body>
     <main class="content-wrapper">
       <section class="intro-section">
-        <header>
-          <h1>Akan Name Generator</h1>
-          <p>
-            Akan names come from Ghanaian culture, where children are named
-            based on the day they were born.<br />
-            This is a simple web application that calculates the day of the week
-            a user was born and assigns them an Akan name based on their
-            gender.<br />
-            Enter your birthday to find yours!
-          </p>
-        </header>
+        <h1>Akan Name Generator</h1>
+        <p>
+          Akan names come from Ghanaian culture, where children are named based
+          on the day they were born.<br />
+          Enter your birthday to find yours!
+        </p>
       </section>
 
-      <!-- Form Section -->
-      <section class="form-selection">
+      <section class="form-section">
         <form id="akan-form">
-          <div class="form-group">
-            <label for="birthdate">Select your Date of Birth</label>
-            <input type="date" id="birthdate" required />
+          <h3>Fill to generate your name</h3>
+
+          <div class="input-group">
+            <label>Year of birth</label>
+            <input
+              type="number"
+              id="year"
+              placeholder="Example: 1989"
+              required
+            />
           </div>
-          <!-- Gender -->
-          <div class="form-group">
-            <label>Gender</label>
-            <div class="radio-group">
-              <input
-                type="radio"
-                name="gender"
-                value="male"
-                id="male"
-                required
-              />
-              <label for="male">Male</label>
-              <input
-                type="radio"
-                name="gender"
-                value="female"
-                id="female"
-                required
-              />
-              <label for="female">Female</label>
-            </div>
+
+          <div class="input-group">
+            <label>Month</label>
+            <input
+              type="number"
+              id="month"
+              placeholder="Example: 12"
+              required
+            />
           </div>
-          <button type="submit" id="submit-button">Find my Name</button>
+
+          <div class="input-group">
+            <label>Date</label>
+            <input type="number" id="day" placeholder="Example: 21" required />
+          </div>
+
+          <label>Select your gender:</label>
+          <div class="radio-options">
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              id="female"
+              required
+            />
+            <label for="female" class="inline-label">Female</label>
+            <br />
+            <input type="radio" name="gender" value="male" id="male" required />
+            <label for="male" class="inline-label">Male</label>
+          </div>
+
+          <button type="submit" id="submit-button">Submit</button>
         </form>
 
         <div id="result-display" class="hidden">
           <h2 id="output-name"></h2>
         </div>
+      </section>
+
+      <section class="table-section">
+        <h2>Naming Reference</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Day of the Week</th>
+              <th>Female Name</th>
+              <th>Male Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sunday</td>
+              <td>Akosua</td>
+              <td>Kwasi</td>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>Adwoa</td>
+              <td>Kudwo</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>Abenaa</td>
+              <td>Kwabena</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>Akua</td>
+              <td>Kwaku</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>Yaa</td>
+              <td>Yaw</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Afua</td>
+              <td>Kofi</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Ama</td>
+              <td>Kwame</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
     <script src="code.js"></script>
