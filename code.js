@@ -11,10 +11,11 @@ document
     const gender = document.querySelector(
       'input[name="gender"]:checked',
     )?.value;
-    
+
     // 2. Validation
     if (!year || !month || !day || !gender) {
       alert("Please fill in all fields!");
       return;
     }
-
+// 3. Create a Date object
+    const birthDate = new Date(year, month - 1, day);
