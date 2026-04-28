@@ -60,12 +60,3 @@ document
     outputName.innerHTML = `You were born on a ${days[dayOfWeek]}. <br> Your Akan name is <strong>${akanName}</strong>!`;
     resultDisplay.classList.remove("hidden");
   });
-
-
-
-
-
-
-
-
-
