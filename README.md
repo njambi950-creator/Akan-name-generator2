@@ -1,7 +1,7 @@
 ## Author: 
 Maryann Njambi
 ## Description
-This is a web application that allows users to discover their "Akan Name" based on their birthday and gender.
+This web application allows users to discover their "Akan Name" based on their birthday and gender.
 In Ghanaian culture, children are traditionally named after the day of the week they were born.
 The application takes a user's date of birth, calculates the specific day of the week,
 and provides their corresponding name in Ashanti Twi.
@@ -19,7 +19,7 @@ JavaScript
 ## Live link:https:
 //njambi950-creator.github.io/Akan-name-generator2/
 ## Contact Information
-Email:Njambingugi950@gmail.com
+Github profile:https://github.com/njambi950-creator
 ## License 
 Copyright(C) 2026 Maryann Njambi
 
