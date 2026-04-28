@@ -13,10 +13,22 @@ document
     )?.value;
 
     // 2. Validation
-    if (!year || !month || !day || !gender) {
-      alert("Please fill in all fields!");
+    if (day < 1 || day > 31) {
+      alert("Wait! A month only has 1 to 31 days.");
+      return; // This stops the code from running further
+    }
+
+    if (month < 1 || month > 12) {
+      alert("There are only 12 months in a year!");
       return;
     }
+
+    // Also check if the year is a reasonable 4-digit number
+    if (year < 1000 || year > 9999) {
+      alert("Please enter a valid 4-digit year.");
+      return;
+    }
+
     // 3. Create a Date object
     const birthDate = new Date(year, month - 1, day);
 

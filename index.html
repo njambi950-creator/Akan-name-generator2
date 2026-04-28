@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link css and html -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+BR:wght@100..400&display=swap" 
@@ -11,7 +13,9 @@ rel="stylesheet">
     <title>Akan Name Generator</title>
   </head>
   <body>
+    <!-- start of information -->
     <main class="content-wrapper">
+      <!-- breaking content into chunks -->
       <section class="intro-section">
         <h1>Akan Name Generator</h1>
         <p>
@@ -22,11 +26,12 @@ rel="stylesheet">
           Enter your birthday to find yours!
         </p>
       </section>
-
+<!-- section for the input form -->
       <section class="form-section">
         <form id="akan-form">
           <h3>Fill to generate your name</h3>
 
+<!-- package for the input, using the same for all 3 to ensure they look the same -->
           <div class="input-group">
             <label>Year of birth</label>
             <input
@@ -36,7 +41,7 @@ rel="stylesheet">
               required
             />
           </div>
-
+<!-- required to ensure that section is filled out before submitting -->
           <div class="input-group">
             <label>Month</label>
             <input
@@ -61,6 +66,7 @@ rel="stylesheet">
               id="female"
               required
             />
+            <!-- inline label to ensure the radio part and text are on the same line otherwise ingekuwa block -->
             <label for="female" class="inline-label">Female</label>
             <br />
             <input type="radio" name="gender" value="male" id="male" required />
@@ -69,7 +75,7 @@ rel="stylesheet">
 
           <button type="submit" id="submit-button">Know Your Akan Name</button>
         </form>
-
+<!-- hiddeen only show after input -->
         <div id="result-display" class="hidden">
           <h2 id="output-name"></h2>
         </div>
@@ -87,12 +93,14 @@ rel="stylesheet">
           </thead>
           <tbody>
             <tr>
+              <!-- table row -->
               <td>Sunday</td>
               <td>Akosua</td>
               <td>Kwasi</td>
             </tr>
             <tr>
               <td>Monday</td>
+              <!-- table data -->
               <td>Adwoa</td>
               <td>Kudwo</td>
             </tr>
