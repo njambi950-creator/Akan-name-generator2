@@ -14,7 +14,7 @@ document
 
     // 2. Validation
     if (day < 1 || day > 31) {
-      alert("Wait! A month only has 1 to 31 days.");
+      alert("A month has a maximum of 31 days.");
       return; // This stops the code from running further
     }
 
