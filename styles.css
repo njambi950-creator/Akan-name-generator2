@@ -1,120 +1,117 @@
 /* 1. Global Setup */
 body {
-    /* sit on edges of webpage */
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    background-image: url(background.jpg);
-    background-size: contain;
-    /* image scale so that it is visible */
-    background-position: center;
-    background-attachment: fixed;
-    /* keep background still even as i scroll */
-    background-repeat: no-repeat;
-    /* prevents repeating if the screen is bigger than the image */
-    background-position: left;
-    /* pins phoyo to the left */
-    background-color: #d2b48c;
+  /* sit on edges of webpage */
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-    display: flex;
-    justify-content: flex-end; 
-    /* push content to the right */
-    min-height: 100vh;
-    /* be at least 100% of viewport height */
+  background-image: url(background.jpg);
+  background-size: contain;
+  /* image scale so that it is visible */
+  background-position: center;
+  background-attachment: fixed;
+  /* keep background still even as i scroll */
+  background-repeat: no-repeat;
+  /* prevents repeating if the screen is bigger than the image */
+  background-position: left;
+  /* pins phoyo to the left */
+  background-color: #d2b48c;
+
+  display: flex;
+  justify-content: flex-end;
+  /* push content to the right */
+  min-height: 100vh;
+  /* be at least 100% of viewport height */
 }
 
 .content-wrapper {
-    width: 90%;
-    /* phone 90% */
-    max-width: 450px;
-    /* desktop 450px */
-    padding: 60px 20% 60px 0;
-    /* room starting from top */
-    display: flex;
-    flex-direction: column;
-    /* stacks content vertically */
-    gap: 40px;
-    text-align: center; 
+  width: 90%;
+  /* phone 90% */
+  max-width: 450px;
+  /* desktop 450px */
+  padding: 60px 20% 60px 0;
+  /* room starting from top */
+  display: flex;
+  flex-direction: column;
+  /* stacks content vertically */
+  gap: 40px;
+  text-align: center;
 }
 
-h1, h2, h3, p, label {
-    color: #2c1a0a;
-    text-shadow: rgba(255, 255, 255, 0.5); 
+h1,
+h2,
+h3,
+p,
+label {
+  color: #2c1a0a;
+  text-shadow: rgba(255, 255, 255, 0.5);
 }
 
 h1 {
-    font-size: 50px;
-    margin-top: 0;
-    /* removes space at the top */
-    font-family: "Dancing Script";
-    font-weight: 500;
-    
+  font-size: 50px;
+  margin-top: 0;
+  /* removes space at the top */
+  font-family: "Dancing Script";
+  font-weight: 500;
 }
 
-.form-section, .table-section {
-    padding: 0;
-    /* no need for boxing */
+.form-section,
+.table-section {
+  padding: 0;
+  /* no need for boxing */
 }
 
 .input-group {
-    margin-bottom: 20px;
-    /* space between year, month and day rows */
-}
-
-input[type="number"] {
-    /* Inputting numbers in the boxes */
-    width: 100%;
-    padding: 12px;
-    /* adding room in the boxes */
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    /* making the border semi transparent black */
-    border-radius: 4px;
-    /* slightly rounds corners */
-    background: rgba(255, 255, 255, 0.3); 
-    box-sizing: border-box;
+  margin-bottom: 20px;
+  /* space between year, month and day rows */
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    /* lines */
-    margin-top: 15px;
-    /* adding spaces */
+  width: 100%;
+  border-collapse: collapse;
+  /* lines */
+  margin-top: 15px;
+  /* adding spaces */
 }
 
-th, td {
-    padding: 12px 8px;
-    border-bottom: 1px solid rgba(44, 26, 10, 0.2); 
-    /* only border bottoms */
-    text-align: left;
+th,
+td {
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(44, 26, 10, 0.2);
+  /* only border bottoms */
+  text-align: left;
 }
 
 th {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    
-    letter-spacing: 1px;
-    border-bottom: 2px solid #2c1a0a;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+
+  letter-spacing: 1px;
+  border-bottom: 2px solid #2c1a0a;
 }
 
 #submit-button {
-    width: 100%;
-    background-color: #5d2e0a;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
+  width: 100%;
+  background-color: #5d2e0a;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 #submit-button:hover {
-    background-color: #3e2712;
+  background-color: #3e2712;
 }
 
-.hidden {
-    display: none;
+.hidden{
+  display: none;
 }
-

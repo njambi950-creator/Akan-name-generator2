@@ -1,59 +1,65 @@
+// test if console works
+console.log("JS is connected");
+
 document
   .getElementById("akan-form")
+  //finding form in html
   .addEventListener("submit", function (event) {
-    // Prevent the form from refreshing the page
+    // eventlistener tells the browser to wait until user clicks submit button
+    // 1. Stop the form from submitting and refreshing the page
     event.preventDefault();
 
-    // 1. Retrieve users input (Fixed typos in getElementById)
-    const year = document.getElementById("year").value;
-    const month = document.getElementById("month").value;
-    const day = document.getElementById("day").value;
-    const gender = document.querySelector(
+    // 2. Get the values entered by the user
+    let dateOfBirthInput = document.getElementById("day")?.value;
+    //string ya day input, value to check if the user hasnt typed anything returns undefined
+    let genderInput = document.querySelector(
+      // query selector is more specific
+      //searches and returns the first element that matches CSS
+      //here used bcz seaching for 2 elements in radio button, and check if its checked
       'input[name="gender"]:checked',
     )?.value;
+    //returns undefined if the value is not found rather than crashing the whole code
 
-    // 2. Validation
-    if (day < 1 || day > 31) {
-      alert("A month has a maximum of 31 days.");
-      return; // This stops the code from running further
+    // 3. Validation
+    if (!dateOfBirthInput || !genderInput) {
+      alert("Please enter a valid date and select your gender.");
+      return;
+      //! means not so if there is no dob or gender input, show results in the curly braces
     }
 
-    if (month < 1 || month > 12) {
-      alert("There are only 12 months in a year!");
+    let date = new Date(dateOfBirthInput);
+    //creating date object
+    if (isNaN(date.getTime())) {
+      // when the code runs and the milliseconds calculated do not make sense according to Unix Epock(01/01/1970)
+      //it is not a number hence brings this response
+      alert("Please enter a valid date.");
       return;
     }
 
-    // Also check if the year is a reasonable 4-digit number
-    if (year < 1000 || year > 9999) {
-      alert("Please enter a valid 4-digit year.");
-      return;
-    }
+    // 4. Extract date components
+    let DD = date.getDate();
+    let MM = date.getMonth() + 1;
+    //january is 0
+    let YYYY = date.getFullYear();
+    let CC = Math.floor(YYYY / 100); //century quotient
+    let YY = YYYY % 100; //year of century-remainder(modulo)
 
-    // 3. Create a Date object
-    const birthDate = new Date(year, month - 1, day);
+    // 5. Calculate the day of the week (d)
+    let d =
+      Math.floor(
+        CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD,
+      ) % 7;
+    //cc/4 -2...calendar adjusts pattern every 4oo years, so were looking for the century were in
+    //26 mm..months arent same leghtn, so ensures the start aligns correctly
+    //5 yy/4 accounting for leap years
+    //dd.. day of the month
 
-    // 4. Get the day of the week (0 = Sunday, 6 = Saturday)
-    const dayOfWeek = birthDate.getDay();
-    // 5. Name Lists
-    const maleNames = [
-      "Kwasi",
-      "Kwadwo",
-      "Kwabena",
-      "Kwaku",
-      "Yaw",
-      "Kofi",
-      "Kwame",
-    ];
-    const femaleNames = [
-      "Akosua",
-      "Adwoa",
-      "Abenaa",
-      "Akua",
-      "Yaa",
-      "Afua",
-      "Ama",
-    ];
-    const days = [
+    // 6. Fix negative values
+    if (d < 0) d += 7;
+    //if output returns less than 0 add 7 to fit (0-6)
+
+    // 7. Define names and days
+    let days = [
       "Sunday",
       "Monday",
       "Tuesday",
@@ -62,13 +68,41 @@ document
       "Friday",
       "Saturday",
     ];
-    // 6. Pick the name based on gender
-    let akanName =
-      gender === "male" ? maleNames[dayOfWeek] : femaleNames[dayOfWeek];
-    // 7. Show the result
-    const resultDisplay = document.getElementById("result-display");
-    const outputName = document.getElementById("output-name");
+    let maleNames = [
+      "Kwasi",
+      "Kwadwo",
+      "Kwabena",
+      "Kwaku",
+      "Yaw",
+      "Kofi",
+      "Kwame",
+    ];
+    let femaleNames = [
+      "Akosua",
+      "Adwoa",
+      "Abenaa",
+      "Akua",
+      "Yaa",
+      "Afua",
+      "Ama",
+    ];
 
-    outputName.innerHTML = `You were born on a ${days[dayOfWeek]}. <br> Your Akan name is <strong>${akanName}</strong>!`;
-    resultDisplay.classList.remove("hidden");
+    let dayName = days[d];
+    let akanName;
+
+    // 8. Determine name based on gender
+    if (genderInput === "male") {
+      akanName = maleNames[d];
+    } else {
+      akanName = femaleNames[d];
+    }
+
+    // 9. Display the result
+    document.getElementById("output-name").innerText =
+      "You were born on a " + dayName + ". Your Akan name is " + akanName + ".";
+    //filling in the empty h2
+
+    alert("Your Akan name is " + akanName + "!");
+
+    document.getElementById("result-display").classList.remove("hidden");
   });

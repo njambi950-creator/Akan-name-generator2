@@ -6,10 +6,12 @@
     <!-- link css and html -->
     <link rel="stylesheet" href="styles.css" />
     <!-- link font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+BR:wght@100..400&display=swap" 
-rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+BR:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
     <title>Akan Name Generator</title>
   </head>
   <body>
@@ -26,35 +28,14 @@ rel="stylesheet">
           Enter your birthday to find yours!
         </p>
       </section>
-<!-- section for the input form -->
+      <!-- section for the input form -->
       <section class="form-section">
         <form id="akan-form">
           <h3>Fill to generate your name</h3>
 
-<!-- package for the input, using the same for all 3 to ensure they look the same -->
-          <div class="input-group">
-            <label>Year of birth</label>
-            <input
-              type="number"
-              id="year"
-              placeholder="Example: 1989"
-              required
-            />
-          </div>
-<!-- required to ensure that section is filled out before submitting -->
-          <div class="input-group">
-            <label>Month</label>
-            <input
-              type="number"
-              id="month"
-              placeholder="Example: 12"
-              required
-            />
-          </div>
-
           <div class="input-group">
             <label>Date</label>
-            <input type="number" id="day" placeholder="Example: 21" required />
+            <input type="date" id="day" placeholder="Example: 21" required />
           </div>
 
           <label>Select your gender:</label>
@@ -75,7 +56,7 @@ rel="stylesheet">
 
           <button type="submit" id="submit-button">Know Your Akan Name</button>
         </form>
-<!-- hiddeen only show after input -->
+        <!-- hidden only show after input -->
         <div id="result-display" class="hidden">
           <h2 id="output-name"></h2>
         </div>
