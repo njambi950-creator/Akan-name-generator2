@@ -1,3 +1,5 @@
+## Project Name:
+Akan Name Generator
 ## Author: 
 Maryann Njambi
 ## Description
