@@ -3,7 +3,6 @@ console.log("JS is connected");
 
 document
   .getElementById("akan-form")
-  //finding form in html
   .addEventListener("submit", function (event) {
     // eventlistener tells the browser to wait until user clicks submit button
     // 1. Stop the form from submitting and refreshing the page
@@ -11,11 +10,9 @@ document
 
     // 2. Get the values entered by the user
     let dateOfBirthInput = document.getElementById("day")?.value;
-    //string ya day input, value to check if the user hasnt typed anything returns undefined
     let genderInput = document.querySelector(
       // query selector is more specific
-      //searches and returns the first element that matches CSS
-      //here used bcz seaching for 2 elements in radio button, and check if its checked
+      //here used bcz searching for 2 elements in radio button, and check if its checked
       'input[name="gender"]:checked',
     )?.value;
     //returns undefined if the value is not found rather than crashing the whole code
@@ -28,7 +25,7 @@ document
     }
 
     let date = new Date(dateOfBirthInput);
-    //creating date object
+    //turns string into data object
     if (isNaN(date.getTime())) {
       // when the code runs and the milliseconds calculated do not make sense according to Unix Epock(01/01/1970)
       //it is not a number hence brings this response
@@ -41,7 +38,7 @@ document
     let MM = date.getMonth() + 1;
     //january is 0
     let YYYY = date.getFullYear();
-    let CC = Math.floor(YYYY / 100); //century quotient
+    let CC = Math.floor(YYYY / 100); //century quotient, math floor=truncate
     let YY = YYYY % 100; //year of century-remainder(modulo)
 
     // 5. Calculate the day of the week (d)
@@ -49,10 +46,11 @@ document
       Math.floor(
         CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD,
       ) % 7;
-    //cc/4 -2...calendar adjusts pattern every 4oo years, so were looking for the century were in
-    //26 mm..months arent same leghtn, so ensures the start aligns correctly
+    //cc/4 -2...calendar adjusts pattern every 400 years, so were looking for the century were in
+    //26 hadi 10 ..months arent same length, 2.6 is the constant for the difference
     //5 yy/4 accounting for leap years
     //dd.. day of the month
+    //%7..getting remainder
 
     // 6. Fix negative values
     if (d < 0) d += 7;

@@ -14,14 +14,12 @@ body {
   background-repeat: no-repeat;
   /* prevents repeating if the screen is bigger than the image */
   background-position: left;
-  /* pins phoyo to the left */
+  /* pins photo to the left */
   background-color: #d2b48c;
 
   display: flex;
   justify-content: flex-end;
   /* push content to the right */
-  min-height: 100vh;
-  /* be at least 100% of viewport height */
 }
 
 .content-wrapper {
@@ -34,7 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   /* stacks content vertically */
-  gap: 40px;
   text-align: center;
 }
 
@@ -75,7 +72,7 @@ h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  /* lines */
+  /* sharing borders */
   margin-top: 15px;
   /* adding spaces */
 }
@@ -90,7 +87,7 @@ td {
 
 th {
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 10px;
 
   letter-spacing: 1px;
   border-bottom: 2px solid #2c1a0a;
@@ -112,6 +109,6 @@ th {
   background-color: #3e2712;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
